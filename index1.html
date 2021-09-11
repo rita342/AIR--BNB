@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ceb4b94ff8.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100%;
+    }
+    
+    #header {
+        background-color: rgb(53, 52, 52);
+        justify-items: center;
+        max-width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    .page-header h6 {
+        font-size: small;
+        text-align: center;
+        padding-top: 10px;
+    }
+    
+    main {
+        background-image: url("https://a0.muscache.com/im/pictures/9754b160-759d-489b-92ad-8846fc94b73d.jpg?im_q=highq&im_w=720");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 700px;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: content-box;
+        width: 100%;
+    }
+    
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3px 3px;
+        flex-wrap: wrap;
+    }
+    
+    @media screen and (max-width:600px) {
+        .header nav {
+            display: none;
+        }
+    }
+    
+    nav li {
+        display: inline-block;
+        padding: 0px 5px;
+        transition: 0.01s;
+    }
+    
+    nav.logo {
+        color: white;
+        padding: 0px 5px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    nav.info {
+        padding: 0px 5px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    
+    nav.info a {
+        text-decoration: none;
+        color: white;
+    }
+    /*animation line in navbar list-->*/
+    
+    .nav-link,
+    .current {
+        position: relative;
+    }
+    
+    .nav-link::before,
+    .current::before {
+        position: absolute;
+        content: "";
+        left: 3;
+        bottom: 1px;
+        width: 20%;
+        height: 2px;
+        background-color: rgb(248, 236, 241);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all .6s;
+    }
+    
+    .current::before {
+        transform: scalex(1)
+    }
+    
+    .nav-link:hover::before {
+        transform: scalex(1)
+    }
+    
+    nav.user-button {
+        color: white;
+        padding: 0px 5px;
+        font-size: 14px;
+    }
+    
+    #navbar {
+        position: absolute;
+        width: 500px;
+        height: 60px;
+        background-color: rgb(241, 234, 234);
+        top: 10%;
+        margin-top: 100px;
+        left: 50%;
+        margin-left: -270px;
+        border-radius: 25px;
+    }
+    
+    #navbar a {
+        text-decoration: none;
+        color: rgb(15, 15, 15);
+    }
+    
+    #where {
+        position: absolute;
+        width: 160px;
+        height: 45px;
+        background-color: rgb(241, 234, 234);
+        border-right: 1px solid rgb(221, 218, 218);
+        font-size: 11px;
+        border-radius: 30px 0px 0px 30px;
+    }
+    
+    #location {
+        margin-left: 13px;
+    }
+    
+    #place {
+        position: absolute;
+        width: 65px;
+        height: 45px;
+        background-color: rgb(241, 234, 234);
+        border-right: 1px solid rgb(221, 218, 218);
+        font-size: 11px;
+        margin-left: 180px;
+    }
+    
+    #checkin {
+        color: gray;
+    }
+    
+    #notes {
+        position: absolute;
+        width: 65px;
+        height: 45px;
+        background-color: rgb(241, 234, 234);
+        border-right: 1px solid rgb(221, 218, 218);
+        font-size: 11px;
+        margin-left: 270px;
+    }
+    
+    #checkout {
+        color: rgb(153, 152, 152);
+    }
+    
+    #add {
+        position: absolute;
+        width: 65px;
+        height: 45px;
+        background-color: rgb(241, 234, 234);
+        border-right: 1px solid rgb(221, 218, 218);
+        font-size: 11px;
+        margin-left: 350px;
+    }
+    
+    #checkout {
+        color: rgb(153, 152, 152);
+    }
+    
+    #search {
+        position: absolute;
+        width: 50px;
+        height: 40px;
+        background-color: rgb(240, 16, 109);
+        margin-left: 440px;
+        border-radius: 20px;
+        margin-top: 3px;
+    }
+    
+    #search i {
+        position: absolute;
+        padding: 15px;
+        color: white;
+    }
+    
+    .where-you-going {
+        position: absolute;
+        background-color: white;
+        border-radius: 20px;
+        width: 60%;
+        height: 45px;
+        margin-left: 120px;
+        margin-top: 20px;
+    }
+    
+    .where-you-going p {
+        text-align: center;
+    }
+    
+    .where-you-going i {
+        color: rgb(246, 251, 252);
+    }
+    
+    .where-you-going {
+        display: none;
+    }
+    
+    @media screen and (max-width:600px) {
+        .where-you-going {
+            display: block;
+        }
+        #navbar {
+            display: none;
+        }
+    }
+    
+    #middle span {
+        color: white;
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 7px;
+    }
+    
+    #end span {
+        color: white;
+        font-size: 13px;
+        padding-top: 10px;
+        padding-left: 100px;
+    }
+    
+    #end i {
+        color: white;
+        padding: 5px;
+    }
+    
+    #end button {
+        background-color: #edf1ed;
+        border-radius: 20px;
+        color: white;
+        padding-top: 5px;
+        cursor: pointer;
+        border: none;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+    }
+    
+    #end button i {
+        color: rgb(90, 86, 86);
+    }
+    
+    #middle-nav {
+        color: rgb(90, 86, 86);
+        background-color: cornsilk;
+        border-radius: 40px;
+        margin-top: 20px;
+        width: 600px;
+        height: 50px;
+        overflow: hidden;
+    }
+    
+    #middle-nav i {
+        padding-top: 15px;
+        padding-left: 15px;
+        border-radius: 45px;
+        border: 10px solid rgb(241, 23, 125);
+        color: white;
+        background-color: rgb(241, 23, 125);
+        margin-top: 3px;
+        margin-left: 30px;
+        text-align: center;
+    }
+    
+    #main-footer {
+        margin-top: 280px;
+        color: rgb(17, 6, 15);
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    #btn {
+        border-radius: 50px;
+        border-style: none;
+        width: 140px;
+        height: 50px;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    
+    #btn span {
+        color: rgb(141, 48, 141);
+        font-size: 10;
+    }
+    
+    .location-link {
+        display: none;
+    }
+    
+    @media screen and (max-width:600px) {
+        #main-footer {
+            margin-left: 45%;
+        }
+        #btn {
+            margin-left: 45%;
+        }
+    }
+    
+    #body {
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+    
+    #body img {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+    
+    #body span {
+        font-size: 13px;
+        padding-left: 2px;
+    }
+    
+    #body2 img {
+        width: 230px;
+        height: 150px;
+    }
+    
+    #body2 span {
+        font-size: 13px;
+        color: black;
+    }
+    
+    #body3 img {
+        height: 270px;
+        width: 100%;
+    }
+    
+    #body3 {
+        position: relative;
+    }
+    
+    #body3 h4 {
+        position: absolute;
+        margin-top: 60px;
+        margin-left: 55px;
+        font-size: 30px;
+    }
+    
+    #body3 h5 {
+        position: absolute;
+        margin-top: 100px;
+        margin-left: 55px;
+        font-size: 30px;
+    }
+    
+    #body3 h6 {
+        position: absolute;
+        margin-top: 140px;
+        margin-left: 55px;
+        font-size: 10px;
+    }
+    
+    #btn2 {
+        position: absolute;
+        margin-top: 180px;
+        margin-left: 55px;
+        border-radius: 6px;
+        background-color: black;
+        border-style: none;
+        width: 100px;
+    }
+    
+    #btn2 span {
+        color: white;
+        font-size: 10px;
+    }
+    
+    #body4 img {
+        height: 240px;
+        width: 100%;
+    }
+    
+    #body5 img {
+        height: 270px;
+        width: 460px;
+        border-radius: 0px 15px 15px 0px;
+    }
+    
+    #btn3 {
+        background-color: white;
+        position: relative;
+        margin-top: 180px;
+        border-radius: 5px;
+        border-style: none;
+        font-size: 14px;
+    }
+    
+    .image-txt-container {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+    }
+    
+    .image1 {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .container img {
+        float: left;
+        border-radius: 10px;
+    }
+    
+    .container span {
+        padding-left: 5px;
+        font-size: 11px;
+    }
+    
+    #row {
+        color: gray;
+        font-size: 12px;
+    }
+    
+    .footer {
+        background-color: rgb(233, 230, 230);
+        margin-left: 80px;
+    }
+</style>
+
+<body>
+
+    <div class="container" id="header">
+        <div class="page-header">
+            <h6><a href="" style="color: rgb(177, 182, 182);">Get the latest on our COVID-19 response</a></h6>
+        </div>
+    </div>
+    <main>
+        <div class="header">
+            <nav class="logo">
+                <ul>
+                    <li><i class="fab fa-1x fa-airbnb"></i></li>
+                    </li>airbnb</li>
+                </ul>
+            </nav>
+
+            <nav class="info">
+                <ul>
+                    <li><a href="#" class="nav-link current">place to stay</a></li>
+                    <li><a href="#" class="nav-link">Experiances</a></li>
+                    <li><a href="#" class="nav-link">Online Experiances</a></li>
+
+                </ul>
+            </nav>
+            <nav class="user-button">
+                <ul>
+                    <li> <button class="button button2"><i class="fas fa-bars"></i><i class="fas fa-user-circle"></i></button></li>
+                    <li style="color:white"> <i class="fas fa-globe"></i></li>
+                    <a href="file:///C:/Users/amanwel/Desktop/summer%20project/index4.html">
+                        <li style="text-decoration: none;color: white;">Become a host</li>
+                    </a>
+
+                </ul>
+            </nav>
+        </div>
+        <div id="navbar">
+            <div id="where">
+                <p id="location">
+                    <span><strong>Location</strong></span><br>
+                    <span><a href="file:///C:/Users/amanwel/Desktop/summer%20project/index3.html">where are you going?</a></span>
+                </p>
+
+            </div>
+            <div id="place">
+                <p id="ckeckin">
+                    <span><strong>Check in</strong></span><br>
+                    <span><a href="#">Add dates</a></span>
+
+                </p>
+            </div>
+            <div id="notes">
+                <p id="ckeckout">
+                    <span><strong>Check out</strong></span><br>
+                    <span><a href="#">Add dates</a></span>
+
+                </p>
+            </div>
+            <div id="add">
+                <p id="guests">
+                    <span><strong>Guests</strong></span><br>
+                    <span><a href="#">Add guests</a></span>
+
+                </p>
+            </div>
+            <div id="search">
+
+                <i class="fas fa-search"></i>
+
+            </div>
+        </div>
+
+        <!--display only in mobile size-->
+        <div class="where-you-going">
+
+            <p> <i class="fas fa-search"></i> where are you going?</p>
+        </div>
+
+
+
+        <div class="row justify-content-center" id="main-footer">
+            <div class="col-sm-3 col-md-3 col-lg-3">
+                <span>Not sure where to go? perfect.</span>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-3 col-md-3 col-lg-3">
+                <button id="btn"><span>I'm flexible</span></button>
+            </div>
+        </div>-->
+
+
+    </main>
+    <div class="container-fluid" style="margin-left:70px;">
+        <h2 style="font-size: 20px;margin-top: 10px;"><strong>Explore nearby</strong></h2>
+        <div class="container" style="margin-left: -13px;">
+            <div class="row row-cols-4">
+                <div class="col-6 col-md-3">
+                    <div class="image2">
+                        <img src="img1.jpg" style="width:30%;height:60px">
+                        <span><strong>Milan</strong></span><br>
+                        <span>One hour drive</span>
+
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="image2">
+                        <img src="img2.jpg" style="width:30%;height:60px">
+                        <span><strong>Venice</strong></span><br>
+                        <span>4.5-hour drive</span>
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="image2">
+                        <img src="img4.png" style="width:30%;height:60px">
+                        <span><strong>Florence</strong></span><br>
+                        <span>4.5-hour drive</span>
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="image2">
+                        <img src="img4.png" style="width:30%;height:60px">
+                        <span><strong>Bologna</strong></span><br>
+                        <span>3-hour drive</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row row-cols-4" style="margin-top:20px;">
+                <div class="col-6 col-md-3">
+                    <div class="image2">
+                        <img src="img5 (2).png" style="width:30%;height:60px">
+                        <span><strong>Turin</strong></span><br>
+                        <span>2.5-hour drive</span>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="image2">
+                        <img src="img6.png" style="width:30%;height:60px">
+                        <span><strong>Verona</strong></span><br>
+                        <span>2.5-hour drive<span>
+                </div>
+
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="image2">
+                    <img src="img7.png" style="width:30%;height:60px">
+                    <span><strong>Genoa</strong></span><br>
+                        <span>3-hour drive</span>
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="image2">
+                        <img src="img8.jpg" style="width:30%;height:60px">
+                        <span><strong>Laspezia</strong></span><br>
+                        <span>3.5-hour drive</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <h2 style="font-size: 18px;margin-top:60px;margin-right: 30px;"><strong>Live any where</strong></h2>
+
+        <div class="row" id="body2" style="margin-right: 110px;">
+            <div class="col-sm-12 col-md-3 col-lg-3"><img src="img21.jpg">
+                <span><strong>Ourdoorgetways</strong></span></div>
+            <div class="col-sm-12 col-md-3 col-lg-3"><img src="img22.jpg">
+                <span><strong>Unique stays</strong></span></div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3"><img src="img23.jpg">
+                <span><strong>Entire homes</strong></span></div>
+
+            <div class="col-sm-12 col-md-3 col-lg-3"><img src="img dog.jpg">
+                <span><strong>Pets allowed</strong></span></div>
+        </div>
+        <div class="row" id="body3" style="margin-right:90px;margin-top: 20px;">
+            <div class="col-12 col-md-12 col-lg-12"><img src="imgcrop.jpg">
+
+            </div>
+            <h4><strong>The Greatest</strong></h4>
+            <h5><strong>Outdoors</strong></h5>
+            <h6>Wlshlists Curated by Airbnb.</h6>
+            <button id="btn2"><span>Get inspired</span></button>
+        </div>
+        <p style="font-size:17px;margin-top:20px;"><strong>Discover Experiences</strong></p>
+        <p style="font-size:12px;padding-top:3px;">Unique activities with local experts-in person on online.</p>
+
+        <div class="row" id="body4" style="margin-right: 110px;">
+            <div class="col-sm-6 col-md-6 col-lg-4"><img src="img31.jpg">
+                <span><strong>Ourdoor collection</strong></span><br>
+                <span style="font-size: 10px;margin-top: 5px;">Experiences that immerse you in nature</span>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4"><img src="img32.jpg">
+                <span><strong>Online Experiences</strong></span><br>
+                <span style="font-size: 10px;">Live interactive activities led by Hosts</span>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4"><img src="img33.jpg">
+                <span><strong>Experiences</strong></span><br>
+                <span style="font-size: 10px;">Local things todo, wherever you are</span>
+            </div>
+        </div>
+        <div class="row" style="margin-right: 90px;margin-left:1px;">
+            <div class="col-sm-6 col-md-6 col-lg-6" style="background-color: black;height:250px;width:100%">
+                <span style="font-size: 30px;color:white;margin-top: 70px;position: absolute;"><strong>Try hosting</strong></span>
+                <span style="font-size: 13px;color:white;margin-top: 120px;position: absolute;">Earn extra income and unlock new</span>
+                <span style="font-size: 13px;color:white;margin-top: 140px;position: absolute;">Opportunity by sharing your space</span>
+
+                <button id="btn3">Learn more</button></div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                <img src="img41.jpg" style="height:250px;width:100%">
+            </div>
+        </div>
+
+
+
+
+
+        <h2 style="font-size: 27px;margin-top: 20px;margin-right: 30px;font-weight:500px;"><strong>Inspiration for future get ways</strong></h2>
+        <div class="row" style="font-size: 13px;margin-top:15px;color:gray;margin-right: 200px;">
+            <div class="col-3 col-md-2">Historic Destination</div>
+            <div class="col-3 col-md-2">Coastal Destination</div>
+            <div class="col-3 col-md-2">Island Destination</div>
+            <div class="col-3 col-md-3">Other Popular Destination</div>
+        </div>
+        <hr style="margin-right: 110px; height: 1px; border-width: 0;color: gray; background-color: gray;">
+        <div id="row">
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Aberdeen</div>
+                <div class="col-12 col-md-3">Aberystwyt</div>
+                <div class="col-12 col-md-3">Alnwick</div>
+                <div class="col-12 col-md-3">Budapest</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Scotland</div>
+                <div class="col-12 col-md-3">Wales</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+
+            </div>
+
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Berwick-upon-tweed</div>
+                <div class="col-12 col-md-3">Boscastle</div>
+                <div class="col-12 col-md-3">Brittany</div>
+                <div class="col-12 col-md-3">Budapest</div>
+
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Bourgogne-Franche-Comte</div>
+                <div class="col-12 col-md-3">Hungary</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Cardiff</div>
+                <div class="col-12 col-md-3">Castleton</div>
+                <div class="col-12 col-md-3">Cheltenham</div>
+                <div class="col-12 col-md-3">Conwy</div>
+
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Wales</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Wales</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Criccieth</div>
+                <div class="col-12 col-md-3">Dartmouth</div>
+                <div class="col-12 col-md-3">Donegal</div>
+                <div class="col-12 col-md-3">Dublin</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Wales</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Country Donegal</div>
+                <div class="col-12 col-md-3">Country Dublin</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Dumfries</div>
+                <div class="col-12 col-md-3">Durham</div>
+                <div class="col-12 col-md-3">Galway</div>
+                <div class="col-12 col-md-3">Glasgow</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Scotland</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">County Galway</div>
+                <div class="col-12 col-md-3">Scotland</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Grassington</div>
+                <div class="col-12 col-md-3">Harrogate</div>
+                <div class="col-12 col-md-3">Hawes</div>
+                <div class="col-12 col-md-3">Hay-on-wye</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Wales</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Inverness</div>
+                <div class="col-12 col-md-3">Kielder</div>
+                <div class="col-12 col-md-3">Krakow</div>
+                <div class="col-12 col-md-3">Lisbon</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Scotland</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Lesser Poland Voivodeship</div>
+                <div class="col-12 col-md-3">Lisbon Region</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Liangollen</div>
+                <div class="col-12 col-md-3">Ludlow</div>
+                <div class="col-12 col-md-3">Lymington</div>
+                <div class="col-12 col-md-3">Malaga</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Wales</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Andalusia</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Milan</div>
+                <div class="col-12 col-md-3">Minehead</div>
+                <div class="col-12 col-md-3">Murcia</div>
+                <div class="col-12 col-md-3">Newcastle upon Tyne</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Lombadrdy</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Region of Murcia</div>
+                <div class="col-12 col-md-3">England</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Nice</div>
+                <div class="col-12 col-md-3">North Berwick</div>
+                <div class="col-12 col-md-3">Norwich</div>
+                <div class="col-12 col-md-3">Nottingham</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Provence-Alpes-Cote d'Azur</div>
+                <div class="col-12 col-md-3">Scotland</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Oban</div>
+                <div class="col-12 col-md-3">Palma</div>
+                <div class="col-12 col-md-3">Pickering</div>
+                <div class="col-12 col-md-3">Pitiochry</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Scotland</div>
+                <div class="col-12 col-md-3">Balearic Islands Region</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Scotland</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Porthmadog</div>
+                <div class="col-12 col-md-3">Portpatrick</div>
+                <div class="col-12 col-md-3">Rye</div>
+                <div class="col-12 col-md-3">Seahouses</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">Wales</div>
+                <div class="col-12 col-md-3">Scotland</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Skipton</div>
+                <div class="col-12 col-md-3">Lianberis</div>
+                <div class="col-12 col-md-3">St Andrews</div>
+                <div class="col-12 col-md-3">St Austell</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Wales</div>
+                <div class="col-12 col-md-3">Scotland</div>
+                <div class="col-12 col-md-3">England</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">Swanage</div>
+                <div class="col-12 col-md-3">Swansea</div>
+                <div class="col-12 col-md-3">Tintagel</div>
+                <div class="col-12 col-md-3">West Wittering</div>
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Wales</div>
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">England</div>
+            </div>
+            <div class="row" style="margin-right: 200px;margin-top:12px;">
+                <div class="col-12 col-md-3">York</div>
+                <div class="col-12 col-md-3">Tokyo</div>
+
+            </div>
+            <div class="row" style="margin-right: 200px;">
+                <div class="col-12 col-md-3">England</div>
+                <div class="col-12 col-md-3">Tokyo Region</div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <hr style="margin-top: 50px;background-color: rgb(216, 210, 210);height: 0.1px;color:rgb(165, 161, 161);">
+    <div class="container" style="margin-left: 70px;font-size: 11px;color: gray;">
+
+        <div class="row" style="margin-right: 75px;color: black;">
+            <div class="col-12 col-md-3">ABOUT</div>
+            <div class="col-12 col-md-3">COMMUNITY</div>
+            <div class="col-12 col-md-3">HOST</div>
+            <div class="col-12 col-md-3">SUPPORT</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">How Airbnb Works</div>
+            <div class="col-12 col-md-3">Diversity & Belonging</div>
+            <div class="col-12 col-md-3">Host your home</div>
+            <div class="col-12 col-md-3">Our Covid-19 Response</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Newstroom</div>
+            <div class="col-12 col-md-3">Accessiblity</div>
+            <div class="col-12 col-md-3">Host Online Experience</div>
+            <div class="col-12 col-md-3">Help Center</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb 2021</div>
+            <div class="col-12 col-md-3">Airbnb Associates</div>
+            <div class="col-12 col-md-3">Host an Experience</div>
+            <div class="col-12 col-md-3">Cancellation options</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Investors</div>
+            <div class="col-12 col-md-3">Frontline Stays</div>
+            <div class="col-12 col-md-3">Responsible hosting</div>
+            <div class="col-12 col-md-3">Neighbourhood Support</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb plus</div>
+            <div class="col-12 col-md-3">Guest Referrals</div>
+            <div class="col-12 col-md-3">Resource Center</div>
+            <div class="col-12 col-md-3">Trust & Saftey</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb Lux</div>
+            <div class="col-12 col-md-3">Airbnb.org</div>
+            <div class="col-12 col-md-3">Community Center</div>
+
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">HotelTonight</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb for Work</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Made possible by Hosts</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Careers</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Founder's Letter</div>
+
+        </div>
+        <!-- <script>
+            const where = document.querySelector("#where a");
+            const location = document.querySelector(".location-link");
+
+            where.addEventListener("click", () => {
+                location.className.toggle("show");
+                where.className.toggle("hide");
+            });
+        </script>-->
+
+
+</body>
+
+
+</html>

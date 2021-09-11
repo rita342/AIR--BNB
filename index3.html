@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ceb4b94ff8.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+</head>
+
+<title>Document</title>
+</head>
+<style>
+    #nav-first ul li {
+        display: inline;
+        padding: 5px 10px;
+    }
+    
+    #nav-first {
+        margin: 20px;
+    }
+    
+    #nav-first button {
+        border-radius: 15px;
+        border-style: none;
+    }
+    
+    #nav-first .logo {
+        color: rgb(248, 52, 94);
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    #nav-second ul li {
+        display: inline;
+        padding: 5px 3px;
+        font-size: 10px;
+    }
+    
+    #nav-second {
+        margin: 10px;
+    }
+    
+    #nav-second button {
+        border-radius: 12px;
+        border-style: solid;
+        width: 48px;
+        font-size: 8px;
+        padding: 4px;
+        border-color: rgb(185, 184, 184);
+    }
+    
+    #carousel img {
+        width: 250px;
+        height: 170px;
+        border-radius: 15px;
+    }
+    
+    #carousel {
+        margin: auto;
+        width: 1210px;
+    }
+    
+    #carousel i {
+        position: absolute;
+        margin-top: 10px;
+        margin-left: 140px;
+        z-index: 1;
+        color: rgb(37, 31, 31);
+        box-shadow: black;
+    }
+    
+    #carousel span {
+        font-size: 13px;
+    }
+</style>
+
+<body>
+    <div class="navbar" id="nav-first">
+        <ul class="logo">
+            <li><i class="fab fa-1x fa-airbnb"></i> airbnb</li>
+        </ul>
+
+        <ul>
+
+            <li>Become a host</li>
+            <li><i class="fas fa-globe"></i></li>
+            <li><button class="button button2"><i class="fas fa-bars"></i><i class="fas fa-user-circle"></i></button></li>
+        </ul>
+    </div>
+    <div class="navbar" id="nav-second">
+
+
+        <ul class="list">
+            <li><strong><i class="fas  fa-home"></i> Houseboats</strong></li>
+            <li>Treehouse</li>
+
+            <li>Beachfront</li>
+            <li>Chalets</li>
+            <li>Boats</li>
+            <li>Yurts</li>
+            <li>Castles</li>
+            <li>Islands</li>
+            <li>Farms</li>
+            <li>Shipping containers</li>
+            <li>Tiny homes</li>
+            <li>A-frames</li>
+            <li>Domes</li>
+            <li>Barns</li>
+            <li>Campervans</li>
+            <li>Caves</li>
+            <li><button class="button button2" style="border-color: black;">Anytime<i class="fas fa-caret-down"></i></button></li>
+            <li><button class="button button2">Guests<i class="fas fa-caret-down"></i></button></li>
+            <li><button class="button button2"><i class="fas fa-sort"></i>Filters</button></li>
+
+        </ul>
+    </div>
+    <div class="container-fluid" style="margin-left:40px;">
+        <div class="row" id="carousel">
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="imgsearch1.jpg" alt="First slide">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search1 - Copy.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search2.jpg" alt="Third slide">
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Polich, Rheinland     </strong>120/night</span>
+                <span>318 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-200" src="search3 - Copy.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-200" src="search4 - Copy.jpg" alt="Second slide">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-200" src="search5 - Copy.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search6 - Copy.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search6.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search7.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search8.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search9.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search12.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTz8G-eDytipfVkJDHA92fVa6-xRDD22JO2w&usqp=CAU" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://a0.muscache.com/im/pictures/bcdda6ab-cc16-4b16-b544-bf0d99a12e2e.jpg?aki_policy=x_large" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtCK3Ku4T25iFP0urN3zFVayigb_8zB6Vy-fjvseS66aqmDNtig1QxOofiFBtppnuSLb4&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+        </div>
+        <div class="row" id="carousel" style="margin-top: 30px;">
+
+
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://www.hostyapp.com/wp-content/uploads/2017/06/Airbnb-Photography-1030x687.jpg" alt="First slide">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="data:image/jpeg;base64,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"
+                                alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSts4c5390pjXHgAuHR_eHeLAbNgrl_uDQGag&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://news.airbnb.com/wp-content/uploads/sites/4/2019/07/PJM013418Q322-Pasadena_House-03074_JL1.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://www.whereverwriter.com/wp-content/uploads/2017/06/bozeman-1024x582.png" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9NRJ-1gsumjUs6QPihhGMRLrwZoER-zEbBQ&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZTVjVyWjui6VJ4mB8Cmx6XW713N2rY6Exqg&usqp=CAU" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://www.gannett-cdn.com/presto/2020/04/27/USAT/fff91239-054a-4f7a-aed4-cae4708e5473-VPC_AIRBNB_CLEAN_POLICY_WIDE_airbnbinc.jpg?width=660&height=371&fit=crop&format=pjpg&auto=webp" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVTshKDop6k9ZUsnDUTS7xWr_ELY2mqtWHtSR3l__tMF2MuBk7c9QT6LmtL7t8EvJ8_d8&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpvJe45TyUWbjkiXT8KSAnxxdZS5v1YduHew&usqp=CAU" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/430292188-dscf9466-newsroomfeatured-1-1623360442.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAHQyRGsUTq7ZEdOfwBv0ve9MUSpibntzgOWgSQHb86PwNuvd_iSdsMmiL3SU8tBGl5co&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUMHif1CDiRkeD7fY9laUx0fxbcmjmtirClA&usqp=CAU" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://lp-cms-production.imgix.net/2020-12/Airbnb%20Times%20Square%20Dome%20bedroom.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYTASP_7rlKLEZgC80V_Xm0aXR8D40JSVD3RwlFwDpZQeyRd9VI0pCSZZFBnF6PxJZMEU&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+        </div>
+        <div class="row" id="carousel" style="margin-top: 30px;">
+
+
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4UxWF7cKqvBtUv_e0xXTiCyooJIZSlYYb3A&usqp=CAU" alt="First slide">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVA-6Hu2NDTGKonvfS8A7AEy56J2VX3ijeWGn34SMpjh6OXUtde6Ka69px9ZT3MD7DXM&usqp=CAU" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmOZeUbtuxFlghEb3IyZ4Gsc37uhBq-kGVSg&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search3 - Copy.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search4 - Copy.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search5 - Copy.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search6 - Copy.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search6.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search7.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search8.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search9.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search12.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search8.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search9.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search12.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+        </div>
+        <div class="row" id="carousel" style="margin-top: 30px;">
+
+
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="imgsearch1.jpg" alt="First slide">
+
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search1 - Copy.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search2.jpg" alt="Third slide">
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search3 - Copy.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search4 - Copy.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search5 - Copy.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="search6 - Copy.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search6.jpg" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="search7.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://s.hdnux.com/photos/01/05/13/16/18133889/3/rawImage.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4pH174-I3uRjXJa8QEP5hx1pL_7B31j0t150VBQeutT_aFONY8sqv2NiHyqLQNkoiIRo&usqp=CAU" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBJzbXXP1ib-kogokWoK08rRRb711DP2USeg&usqp=CAU" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+
+            <div class="col-2">
+                <div><i class="far fa-heart"></i></div>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="https://i.pinimg.com/originals/04/7b/7e/047b7ef04c72ffcfb9cd9c5dfad3721d.jpg" alt="First slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://a0.muscache.com/im/pictures/dfeac618-f30e-4df0-b1ae-e0483ad80aed.jpg?im_w=480" alt="Second slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="https://www.deltaairbnb.com/sites/default/files/pages/room-002.jpg" alt="Third slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <span><strong>Saint-Dye-sur-Lpirw,center-v..$127/night    </strong>120/night</span>
+                <span>396 miles away</span>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container" style="margin-left: 70px;font-size: 11px;color: rgb(107, 106, 106);margin-top: 70px;">
+
+        <div class="row" style="margin-right: 75px;color: black;">
+            <div class="col-12 col-md-3">ABOUT</div>
+            <div class="col-12 col-md-3">COMMUNITY</div>
+            <div class="col-12 col-md-3">HOST</div>
+            <div class="col-12 col-md-3">SUPPORT</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">How Airbnb Works</div>
+            <div class="col-12 col-md-3">Diversity & Belonging</div>
+            <div class="col-12 col-md-3">Host your home</div>
+            <div class="col-12 col-md-3">Our Covid-19 Response</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Newstroom</div>
+            <div class="col-12 col-md-3">Accessiblity</div>
+            <div class="col-12 col-md-3">Host Online Experience</div>
+            <div class="col-12 col-md-3">Help Center</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb 2021</div>
+            <div class="col-12 col-md-3">Airbnb Associates</div>
+            <div class="col-12 col-md-3">Host an Experience</div>
+            <div class="col-12 col-md-3">Cancellation options</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Investors</div>
+            <div class="col-12 col-md-3">Frontline Stays</div>
+            <div class="col-12 col-md-3">Responsible hosting</div>
+            <div class="col-12 col-md-3">Neighbourhood Support</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb plus</div>
+            <div class="col-12 col-md-3">Guest Referrals</div>
+            <div class="col-12 col-md-3">Resource Center</div>
+            <div class="col-12 col-md-3">Trust & Saftey</div>
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb Lux</div>
+            <div class="col-12 col-md-3">Airbnb.org</div>
+            <div class="col-12 col-md-3">Community Center</div>
+
+
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">HotelTonight</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Airbnb for Work</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Made possible by Hosts</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Careers</div>
+        </div>
+        <div class="row" style="margin-right: 75px;margin-top: 5px;">
+            <div class="col-12 col-md-3">Founder's Letter</div>
+
+        </div>
+
+
+
+</body>
+
+</html>
